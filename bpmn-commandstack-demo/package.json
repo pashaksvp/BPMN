@@ -1,0 +1,23 @@
+{
+  "name": "bpmn-commandstack-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Демо механизма CommandStack в bpmn-js 18.31.1: undo/redo, вложенные команды, перехватчики и правила",
+  "author": "Фомин Павел Андреевич",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bpmn-js": "18.31.1",
+    "diagram-js": "15.28.1"
+  },
+  "overrides": {
+    "diagram-js": "15.28.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
+}

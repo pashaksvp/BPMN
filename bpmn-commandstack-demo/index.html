@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bpmn-js CommandStack — демо</title>
+</head>
+<body>
+  <header>
+    <h1>bpmn-js 18.31.1 · CommandStack</h1>
+    <span class="author">Фомин Павел Андреевич</span>
+  </header>
+
+  <div class="toolbar">
+    <button id="btn-create">+ Задача</button>
+    <button id="btn-delete-task" title="modeling.removeShape(задача) — сценарий диаграммы последовательности">Удалить «Проверить заявку»</button>
+    <button id="btn-delete-ui" title="editorActions.trigger('removeSelection') — как клавиша Delete, с проверкой правил">Удалить выделенное (через правила)</button>
+    <button id="btn-delete-start" class="warn" title="modeling.removeShape(старт) — в обход правил">Удалить старт из кода</button>
+    <button id="btn-colorize" title="commandStack.execute('demo.colorize', …)">Покрасить выделенное</button>
+    <span class="sep"></span>
+    <button id="btn-undo">↶ Undo</button>
+    <button id="btn-redo">↷ Redo</button>
+    <button id="btn-reset">Сброс</button>
+  </div>
+
+  <p id="status">Щёлкните по холсту, чтобы работали Ctrl+Z / Ctrl+Y и Delete.</p>
+
+  <main>
+    <div id="canvas"></div>
+    <aside>
+      <h2>Стек команд</h2>
+      <div id="stack"></div>
+      <h2>События последнего действия</h2>
+      <div id="trace"><p class="empty">Здесь появится трасса фаз.</p></div>
+    </aside>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
